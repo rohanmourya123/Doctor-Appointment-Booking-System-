@@ -11,24 +11,30 @@ public class DCA_User {
 	private String user_Id;
 	private String userName;
 	private String role;
+	private String email;
+	private String password;
 	private LocalDate created_At;
 	private LocalDate last_Updated;
 	public DCA_User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public DCA_User(String userName, String role) {
+	public DCA_User(String userName, String role, String email, String password) {
 		super();
 		this.userName = userName;
 		this.role = role;
+		this.email = email;
+		this.password = password;
 		this.created_At = LocalDate.now();
 		this.last_Updated = LocalDate.now();
 	}
-	public DCA_User(String user_Id, String userName, String role) {
+	public DCA_User(String user_Id, String userName, String role, String email, String password) {
 		super();
 		this.user_Id = user_Id;
 		this.userName = userName;
 		this.role = role;
+		this.email = email;
+		this.password = password;
 		this.created_At = LocalDate.now();
 		this.last_Updated = LocalDate.now();
 	}
@@ -55,6 +61,18 @@ public class DCA_User {
 	}
 	public LocalDate getLast_Updated() {
 		return last_Updated;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 }
