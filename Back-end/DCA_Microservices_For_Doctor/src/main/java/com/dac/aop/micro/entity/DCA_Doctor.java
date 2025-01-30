@@ -14,29 +14,30 @@ import jakarta.persistence.Transient;
 public class DCA_Doctor {
 
 	@Id
-	private String doctorid;
+	private String doctorId;
 
 	private String fullname;
 	private String email;
 	private String contact;
 	private String qualification;
-	private String specality;
+	private String speciality;
 	private String experience;
 	private String gender;
-	private String experience_id;
+	private String experienceId;
 //	private String hospital_name;
 //	private String start_from;
 //	private String end_to;
 
 //	@Lob
 //	private byte[] exp_letter;
+
 	@Lob
 	private byte[] DoctorLicense;
 
-	private String user_id;
-	private String patient_id;
-	private String appointment_id;
-	private String receptionist_id;
+	private String userId;
+	private String patientId;
+	private String appointmentId;
+	private String receptionistId;
 
 	@Transient
 	private DCA_User user;
@@ -57,42 +58,42 @@ public class DCA_Doctor {
 		super();
 	}
 
-	public DCA_Doctor(String doctorid, String fullname, String email, String contact, String qualification,
-			String specality, String experience, String gender, String experience_id, String hospital_name,
-			String start_from, String end_to, byte[] exp_letter, byte[] doctorLicense, String user_id, String patient_id,
-			String appointment_id, String receptionist_id, DCA_User user, DCA_Appointment appointment,
+	public DCA_Doctor(String doctorId, String fullname, String email, String contact, String qualification,
+			String speciality, String experience, String gender, String experienceId, String hospital_name,
+			String start_from, String end_to, byte[] exp_letter, byte[] doctorLicense, String userId, String patientId,
+			String appointmentId, String receptionistId, DCA_User user, DCA_Appointment appointment,
 			DCA_Patient patient, DCA_Receptionist receptionist) {
 		super();
-		this.doctorid = doctorid;
+		this.doctorId = doctorId;
 		this.fullname = fullname;
 		this.email = email;
 		this.contact = contact;
 		this.qualification = qualification;
-		this.specality = specality;
+		this.speciality = speciality;
 		this.experience = experience;
 		this.gender = gender;
-		this.experience_id = experience_id;
+		this.experienceId = experienceId;
 //		this.hospital_name = hospital_name;
 //		this.start_from = start_from;
 //		this.end_to = end_to;
 //		this.exp_letter = exp_letter;
 		DoctorLicense = doctorLicense;
-		this.user_id = user_id;
-		this.patient_id = patient_id;
-		this.appointment_id = appointment_id;
-		this.receptionist_id = receptionist_id;
-		this.user = user;
-		this.appointment = appointment;
-		this.patient = patient;
-		this.receptionist = receptionist;
+		this.userId = userId;
+		this.patientId = patientId;
+		this.appointmentId = appointmentId;
+		this.receptionistId = receptionistId;
+//		this.user = user;
+//		this.appointment = appointment;
+//		this.patient = patient;
+//		this.receptionist = receptionist ;
 	}
 
-	public String getDoctorid() {
-		return doctorid;
+	public String getDoctorId() {
+		return doctorId;
 	}
 
-	public void setDoctorid(String doctorid) {
-		this.doctorid = doctorid;
+	public void setDoctorId(String doctorId) {
+		this.doctorId = doctorId;
 	}
 
 	public String getFullname() {
@@ -128,11 +129,11 @@ public class DCA_Doctor {
 	}
 
 	public String getSpecality() {
-		return specality;
+		return speciality;
 	}
 
 	public void setSpecality(String specality) {
-		this.specality = specality;
+		this.speciality = specality;
 	}
 
 	public String getExperience() {
@@ -151,15 +152,15 @@ public class DCA_Doctor {
 		this.gender = gender;
 	}
 
-	public String getExperience_id() {
-		return experience_id;
+	public String getExperienceId() {
+		return experienceId;
 	}
 
-	public void setExperience_id(String experience_id) {
-		this.experience_id = experience_id;
+	public void setExperienceId(String experienceId) {
+		this.experienceId = experienceId;
 	}
 
-//	public String getHospital_name() {
+//	public String getHospital_name() {+++
 //		return hospital_name;
 //	}
 //
@@ -199,36 +200,36 @@ public class DCA_Doctor {
 		DoctorLicense = doctorLicense;
 	}
 
-	public String getUser_id() {
-		return user_id;
+	public String getuserId() {
+		return userId;
 	}
 
-	public void setUser_id(String user_id) {
-		this.user_id = user_id;
+	public void setUser_id(String userId) {
+		this.userId = userId;
 	}
 
-	public String getPatient_id() {
-		return patient_id;
+	public String getpatientId() {
+		return patientId;
 	}
 
-	public void setPatient_id(String patient_id) {
-		this.patient_id = patient_id;
+	public void setpatientId(String patientId) {
+		this.patientId = patientId;
 	}
 
-	public String getAppointment_id() {
-		return appointment_id;
+	public String getappointmentId() {
+		return appointmentId;
 	}
 
-	public void setAppointment_id(String appointment_id) {
-		this.appointment_id = appointment_id;
+	public void setAppointment_id(String appointmentId) {
+		this.appointmentId = appointmentId;
 	}
 
 	public String getReceptionist_id() {
-		return receptionist_id;
+		return receptionistId;
 	}
 
-	public void setReceptionist_id(String receptionist_id) {
-		this.receptionist_id = receptionist_id;
+	public void setreceptionistId(String receptionistId) {
+		this.receptionistId = receptionistId;
 	}
 
 	public DCA_User getUser() {

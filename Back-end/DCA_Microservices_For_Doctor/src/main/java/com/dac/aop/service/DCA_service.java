@@ -14,9 +14,11 @@ public interface DCA_service {
 	DCA_Doctor get_Doctor(String id);
 	
 	List<DCA_Doctor> getAllDoctor();
+	List<DCA_Doctor> getDoctorByPatId (String patientId);
+   List<DCA_Doctor> getDoctorByExperId(String experienceId);
+	List<DCA_Doctor> getDoctorByAppId(String appointmentId);
+List<DCA_Doctor> getDoctorByRecpId(String receptionistId);
 	
-	
-	
-	
+List<DCA_Doctor> getDoctorByUserId(String userId);
 
 }
