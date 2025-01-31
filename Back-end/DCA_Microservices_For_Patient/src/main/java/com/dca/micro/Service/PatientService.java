@@ -10,4 +10,8 @@ public interface PatientService {
 	void updatePatient(DCA_Patient patient,String id);
 	DCA_Patient getPatient(String id);
 	void deletePatient(String id);
+	List<DCA_Patient> getPatientByDoctorId(String DocId);
+	List<DCA_Patient> getPatientByReceptionistId(String receptionistId);
+	List<DCA_Patient> getPatientByUserId(String userId);
+	List<DCA_Patient> getPatientByAppointmentId(String appointmentId);
 }

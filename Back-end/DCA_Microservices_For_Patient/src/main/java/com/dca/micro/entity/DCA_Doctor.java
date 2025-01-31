@@ -12,11 +12,6 @@ public class DCA_Doctor {
 	private String experience;
 	private String gender;
 	private String experience_id;
-//	private String hospital_name;
-//	private String start_from;
-//	private String end_to;
-
-//	private byte exp_letter;
 
 	private byte[] DoctorLicense;
 

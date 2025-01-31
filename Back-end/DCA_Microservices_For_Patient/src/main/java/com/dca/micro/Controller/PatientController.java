@@ -51,4 +51,39 @@ public class PatientController {
 		
 	}
 	
+	@GetMapping("/doctor/{doctor_id}")
+	public ResponseEntity<List<DCA_Patient>> getPatientByDoctorId(@PathVariable String doctor_id){
+		List<DCA_Patient> patientList=patientService.getPatientByDoctorId(doctor_id);
+		if(patientList.isEmpty())
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		else
+			return ResponseEntity.status(HttpStatus.FOUND).body(patientList);
+	}
+	
+	@GetMapping("/receptionist/{receptionistId}")
+	public ResponseEntity<List<DCA_Patient>> getPatientByReceptionistId(@PathVariable String receptionistId){
+		List<DCA_Patient> patientList=patientService.getPatientByReceptionistId(receptionistId);
+		if(patientList.isEmpty())
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		else
+			return ResponseEntity.status(HttpStatus.FOUND).body(patientList);
+	}
+	
+	@GetMapping("/user/{userId}")
+	public ResponseEntity<List<DCA_Patient>> getPatientByUserId(@PathVariable String userId){
+		List<DCA_Patient> patientList=patientService.getPatientByUserId(userId);
+		if(patientList.isEmpty())
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		else
+			return ResponseEntity.status(HttpStatus.FOUND).body(patientList);
+	}
+	
+	@GetMapping("/appointment/{appointmentId}")
+	public ResponseEntity<List<DCA_Patient>> getPatientByAppointmentId(@PathVariable String appointmentId){
+		List<DCA_Patient> patientList=patientService.getPatientByAppointmentId(appointmentId);
+		if(patientList.isEmpty())
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		else
+			return ResponseEntity.status(HttpStatus.FOUND).body(patientList);
+	}
 }

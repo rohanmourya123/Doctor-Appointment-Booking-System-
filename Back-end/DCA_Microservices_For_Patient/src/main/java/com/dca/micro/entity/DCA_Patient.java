@@ -20,10 +20,10 @@ public class DCA_Patient {
 	private String contact;
 	private LocalDate DOB;
 	private String email_Id;
-	private String user_Id;
-	private String receptionist_Id;
-	private String appointment_Id;
-	private String doctor_Id;
+	private String userId;
+	private String receptionistId;
+	private String appointmentId;
+	private String doctorId;
 
 	@Transient
 	private DCA_User user;
@@ -46,8 +46,7 @@ public class DCA_Patient {
 	}
 
 	public DCA_Patient(String firstName, String lastName, String gender, String contact, LocalDate dOB, String email_Id,
-			String user_Id, String receptionist_Id, String appointment_Id, String doctor_Id, DCA_User user,
-			DCA_Receptionist receptionist, DCA_Appointment appointment, DCA_Doctor doctor, byte[] medicalRecords) {
+			String user_Id, String receptionistId, String appointmentId, String doctorId, byte[] medicalRecords) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -55,21 +54,16 @@ public class DCA_Patient {
 		this.contact = contact;
 		DOB = dOB;
 		this.email_Id = email_Id;
-		this.user_Id = user_Id;
-		this.receptionist_Id = receptionist_Id;
-		this.appointment_Id = appointment_Id;
-		this.doctor_Id = doctor_Id;
-		this.user = user;
-		this.receptionist = receptionist;
-		this.appointment = appointment;
-		this.doctor = doctor;
+		this.userId = userId;
+		this.receptionistId = receptionistId;
+		this.appointmentId = appointmentId;
+		this.doctorId = doctorId;
 		this.medicalRecords = medicalRecords;
 	}
 
 	public DCA_Patient(String patient_Id, String firstName, String lastName, String gender, String contact,
-			LocalDate dOB, String email_Id, String user_Id, String receptionist_Id, String appointment_Id,
-			String doctor_Id, DCA_User user, DCA_Receptionist receptionist, DCA_Appointment appointment,
-			DCA_Doctor doctor, byte[] medicalRecords) {
+			LocalDate dOB, String email_Id, String userId, String receptionistId, String appointmentId,
+			String doctorId, byte[] medicalRecords) {
 		super();
 		this.patient_Id = patient_Id;
 		this.firstName = firstName;
@@ -78,14 +72,10 @@ public class DCA_Patient {
 		this.contact = contact;
 		this.DOB = dOB;
 		this.email_Id = email_Id;
-		this.user_Id = user_Id;
-		this.receptionist_Id = receptionist_Id;
-		this.appointment_Id = appointment_Id;
-		this.doctor_Id = doctor_Id;
-		this.user = user;
-		this.receptionist = receptionist;
-		this.appointment = appointment;
-		this.doctor = doctor;
+		this.userId = userId;
+		this.receptionistId = receptionistId;
+		this.appointmentId = appointmentId;
+		this.doctorId = doctorId;
 		this.medicalRecords = medicalRecords;
 	}
 
@@ -145,36 +135,36 @@ public class DCA_Patient {
 		this.email_Id = email_Id;
 	}
 
-	public String getUser_Id() {
-		return user_Id;
+	public String getUserId() {
+		return userId;
 	}
 
-	public void setUser_Id(String user_Id) {
-		this.user_Id = user_Id;
+	public void setUser_Id(String userId) {
+		this.userId = userId;
 	}
 
-	public String getReceptionist_Id() {
-		return receptionist_Id;
+	public String getReceptionistId() {
+		return receptionistId;
 	}
 
-	public void setReceptionist_Id(String receptionist_Id) {
-		this.receptionist_Id = receptionist_Id;
+	public void setReceptionistId(String receptionistId) {
+		this.receptionistId = receptionistId;
 	}
 
-	public String getAppointment_Id() {
-		return appointment_Id;
+	public String getAppointmentId() {
+		return appointmentId;
 	}
 
-	public void setAppointment_Id(String appointment_Id) {
-		this.appointment_Id = appointment_Id;
+	public void setAppointmentId(String appointmentId) {
+		this.appointmentId = appointmentId;
 	}
 
-	public String getDoctor_Id() {
-		return doctor_Id;
+	public String getdoctorId() {
+		return doctorId;
 	}
 
-	public void setDoctor_Id(String doctor_Id) {
-		this.doctor_Id = doctor_Id;
+	public void setdoctorId(String doctorId) {
+		this.doctorId = doctorId;
 	}
 
 	public DCA_User getUser() {

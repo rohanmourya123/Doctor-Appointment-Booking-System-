@@ -45,4 +45,23 @@ public class PatientServiceImpl implements PatientService {
 		
 	}
 
+	@Override
+	public List<DCA_Patient> getPatientByDoctorId(String DocId) {
+		return patientRepository.findAllByDoctorId(DocId);
+	}
+
+	@Override
+	public List<DCA_Patient> getPatientByReceptionistId(String receptionistId) {
+		return patientRepository.findAllByReceptionistId(receptionistId);
+		
+	}
+	@Override
+	public List<DCA_Patient> getPatientByUserId(String userId){
+		return patientRepository.findAllByUserId(userId);
+	}
+
+	@Override
+	public List<DCA_Patient> getPatientByAppointmentId(String appointmentId){
+		return patientRepository.findAllByAppointmentId(appointmentId);
+	}
 }
